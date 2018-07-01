@@ -16,7 +16,6 @@ export default class Button extends Component {
     return (
       <button 
         style={buttonStyle}
-        // onClick={() => alert('Hello button clicked')}
         className={this.getClassName()}
         onClick={this.props.onClick}
       >{this.props.text}</button>

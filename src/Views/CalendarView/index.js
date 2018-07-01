@@ -17,7 +17,7 @@ export default class CalendarView extends Component {
     Workouts, Today, Micro, Meso, Macro
   ];
   render() {
-    const MyCalendarView = this.componentsToRender[this.props.newIndex];
+    const MyCalendarView = this.componentsToRender[this.props.viewIndex];
     return (
       <div>
         <p>The current active index is</p>
@@ -30,5 +30,5 @@ export default class CalendarView extends Component {
 
 CalendarView.defaultProps = {
   defaultActiveIndex: 0,
-  newIndex: 0
+  viewIndex: 0
 };

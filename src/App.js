@@ -33,7 +33,7 @@ class App extends Component {
           selectedIndex={this.state.activeModeIndex}
         />
         <CalendarView 
-          newIndex={this.state.activeModeIndex}
+          viewIndex={this.state.activeModeIndex}
         />
       </div>
     );
