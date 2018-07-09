@@ -3,6 +3,8 @@ import './App.css';
 import CalendarBtns from './Components/Buttongroup';
 import CalendarView from './Views/CalendarView/';
 import calendarModel from './Views/CalendarView/calendar.model';
+import Footer from './Components/Footer';
+
 const myCalendar = new calendarModel();
 
 class App extends Component {
@@ -35,6 +37,7 @@ class App extends Component {
         <CalendarView 
           viewIndex={this.state.activeModeIndex}
         />
+        <Footer/>
       </div>
     );
   }
