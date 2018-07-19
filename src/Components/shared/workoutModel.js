@@ -1,3 +1,38 @@
+class Workout {
+  constructor(name,day,time,duration,scheduledByTrainer,type,difficulty,description,coachGoals,coachNotes,clientNotes,circuit) {
+    this.name = name;
+    this.day = day;
+    this.time = time;
+    this.duration = duration;
+    this.scheduledByTrainer = scheduledByTrainer;
+    this.type = type;
+    this.difficulty = difficulty;
+    this.description = description;
+    this.coachGoals = coachGoals;
+    this.coachNotes = coachNotes;
+    this.clientNotes = clientNotes;
+    this.circuits = circuit;
+  }
+
+}
+
+let workout1 = new Workout(
+  'Hermanator',
+  'July 2',
+  '12pm',
+  '60min',
+  true,
+  'Resistance',
+  1,
+  'take your time',
+  'get client used to working out',
+  'This was fun',
+  []
+)
+
+console.log(workout1);
+
+
 let workout = {
   name: 'workout A',
   day: 'thursday',
