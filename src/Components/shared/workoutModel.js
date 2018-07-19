@@ -1,5 +1,17 @@
 class Workout {
-  constructor(name,day,time,duration,scheduledByTrainer,type,difficulty,description,coachGoals,coachNotes,clientNotes,circuit) {
+  constructor(
+    name,
+    day,
+    time,
+    duration,
+    scheduledByTrainer,
+    type,
+    difficulty,
+    description,
+    coachGoals,
+    coachNotes,
+    clientNotes,
+    circuit) {
     this.name = name;
     this.day = day;
     this.time = time;
@@ -30,7 +42,7 @@ let workout1 = new Workout(
   []
 )
 
-console.log(workout1);
+// console.log(workout1);
 
 
 let workout = {
@@ -111,11 +123,12 @@ class Exercise {
 }
 
 let exercise1 = new Exercise(1, ['DB', 'push'], 'db chest press', 3, 10, 135, '1 min', '3-2-1');
-console.log(exercise1);
+let exercise2 = new Exercise(2, ['DB', 'push'], 'db chest press', 3, 10, 135, '1 min', '3-2-1');
+// console.log(exercise1);
 
 
 class Circuit {
-  constructor(number, type, exercises) {
+  constructor(number, type, exercise) {
     this.number = number;
     this.type = type;
     this.exercise = exercise;
@@ -123,3 +136,8 @@ class Circuit {
 
 
 }
+
+let circuit1 = new Circuit(1, 'warm up', [exercise1, exercise2])
+
+console.log(circuit1);
+console.log(circuit1.exercise[1][7]);
