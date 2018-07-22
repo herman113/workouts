@@ -69,3 +69,7 @@ html {
   /* height: 100px; */
   flex-grow: 1;
 }
+
+.micro__output {
+  width: 10px;
+}

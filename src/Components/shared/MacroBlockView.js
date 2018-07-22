@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './macro-block-view.css';
+import './macroBlockView.css';
 
 class MacroBlock extends Component {
   render() {
@@ -114,6 +114,61 @@ class MacroBlock extends Component {
           <div className="macro__item macro__output">Goal</div>
           <div className="macro__item macro__output">Goal</div>
           <div className="macro__item macro__output">Goal</div>
+        </div>
+        <div className="macro">
+          <div className="macro__item macro__label">Micro</div>
+          <div className="macro__item micro__output">1</div>
+          <div className="macro__item macro__output">1</div>
+          <div className="macro__item macro__output">1</div>
+          <div className="macro__item macro__output">1</div>
+          <div className="macro__item macro__output">1</div>
+          <div className="macro__item macro__output">1</div>
+          <div className="macro__item macro__output">1</div>
+          <div className="macro__item macro__output">1</div>
+          <div className="macro__item macro__output">1</div>
+          <div className="macro__item macro__output">1</div>
+          <div className="macro__item macro__output">1</div>
+          <div className="macro__item macro__output">1</div>
+          <div className="macro__item macro__output">1</div>
+          <div className="macro__item macro__output">1</div>
+          <div className="macro__item macro__output">1</div>
+          <div className="macro__item macro__output">1</div>
+          <div className="macro__item macro__output">1</div>
+          <div className="macro__item macro__output">1</div>
+          <div className="macro__item macro__output">1</div>
+          <div className="macro__item macro__output">1</div>
+          <div className="macro__item macro__output">1</div>
+          <div className="macro__item macro__output">1</div>
+          <div className="macro__item macro__output">1</div>
+          <div className="macro__item macro__output">1</div>
+          <div className="macro__item macro__output">1</div>
+          <div className="macro__item macro__output">1</div>
+          <div className="macro__item macro__output">1</div>
+          <div className="macro__item macro__output">1</div>
+          <div className="macro__item macro__output">1</div>
+          <div className="macro__item macro__output">1</div>
+          <div className="macro__item macro__output">1</div>
+          <div className="macro__item macro__output">1</div>
+          <div className="macro__item macro__output">1</div>
+          <div className="macro__item macro__output">1</div>
+          <div className="macro__item macro__output">1</div>
+          <div className="macro__item macro__output">1</div>
+          <div className="macro__item macro__output">1</div>
+          <div className="macro__item macro__output">1</div>
+          <div className="macro__item macro__output">1</div>
+          <div className="macro__item macro__output">1</div>
+          <div className="macro__item macro__output">1</div>
+          <div className="macro__item macro__output">1</div>
+          <div className="macro__item macro__output">1</div>
+          <div className="macro__item macro__output">1</div>
+          <div className="macro__item macro__output">1</div>
+          <div className="macro__item macro__output">1</div>
+          <div className="macro__item macro__output">1</div>
+          <div className="macro__item macro__output">1</div>
+          <div className="macro__item macro__output">1</div>
+          <div className="macro__item macro__output">1</div>
+          <div className="macro__item macro__output">1</div>
+          <div className="macro__item macro__output">1</div>
         </div>
       </div>
     )

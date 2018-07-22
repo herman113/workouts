@@ -15,7 +15,7 @@ export default class WorkoutView extends Component {
             <th colspan="6">Today's workouts</th>
           </thead>
           <tr>
-            <th>Name</th>
+            <th style={{ width: '200px' }}>Name</th>
             <th>Sets</th>
             <th>Reps</th>
             <th>Load</th>
