@@ -2,7 +2,7 @@
 /*-----------------------------------------Exercise class------------------------------------*/
 /*------------------------------------------------------------------------------------------*/
 
-class Exercise {
+export class Exercise {
   constructor(number,tags,name,sets,reps,load,rest,tempo) {
     this.number = number;
     this.tags = tags;

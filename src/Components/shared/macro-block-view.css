@@ -1,0 +1,71 @@
+/* --------------------------------------------
+Colors
+ ----------------------------------------------*/
+:root {
+  --color-grey-light: rgb(229, 227, 227);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  /* font-size: 62.5%; */
+}
+
+.macro-block-container {
+  /* display: flex; */
+  /* color: red; */
+  /* font-size: 1.6rem; */
+  min-height: 600px;
+  border: 1px solid black;
+  padding: 20px;
+  margin: 10px;
+}
+
+.program, 
+.macro,
+.month { 
+  background-color: azure;
+  /* padding: 10px; */
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: flex-start;
+  /* align-items: center; */
+  /* width: 50px; */
+}
+
+.program__item, 
+.macro__item,
+.month__item {
+  /* margin: 10px; */
+  padding: 20px;
+  /* margin: 10px 0px; */
+  border: 1px solid black;
+  background-color: var(--color-grey-light);
+  /* height: 75px; */
+  /* width: 100px; */
+}
+
+
+.program__label,
+.macro__label,
+.month__label {
+  /* width: 10%; */
+  width: 80px;
+}
+
+.program__output,
+.macro__output,
+.month__output {
+  /* height: 100px; */
+  flex-grow: 1;
+}

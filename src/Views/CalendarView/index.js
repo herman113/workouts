@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import MacroBlock from '../../Components/shared/MacroBlockView';
 import Macro from './MacroCalendar';
 import Meso from './MesoCalendar';
 import Micro from './MicroCalendar';
@@ -14,7 +15,7 @@ export default class CalendarView extends Component {
   //   'Workouts View'
   // ]
   componentsToRender = [
-    Workouts, Today, Micro, Meso, Macro
+    Workouts, Today, Micro, Meso, Macro, MacroBlock
   ];
   render() {
     const MyCalendarView = this.componentsToRender[this.props.viewIndex];
