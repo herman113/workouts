@@ -1,7 +1,83 @@
 import React, { Component } from 'react';
 import './macroBlockView.css';
 
+
+function ListItem(props) {
+  // Correct! There is no need to specify the key here:
+  return <div className="micro__output">{props.value}</div>;
+}
+
+function NumberList(props) {
+  const numbers = props.numbers;
+  const listItems = numbers.map(number => (
+    // Correct! Key should be specified inside the array.
+    <ListItem key={number.toString()} value={number} />
+  ));
+  return (
+    <div className="micro">
+      <div className="micro__label">Micro</div>
+      {listItems}
+    </div>
+  )
+}
+
+const numbers = [
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11,
+  12,
+  13,
+  14,
+  15,
+  16,
+  17,
+  18,
+  19,
+  20,
+  21,
+  22,
+  23,
+  24,
+  25,
+  26,
+  27,
+  28,
+  29,
+  30,
+  31,
+  32,
+  33,
+  34,
+  35,
+  36,
+  37,
+  38,
+  39,
+  40,
+  41,
+  42,
+  43,
+  44,
+  45,
+  46,
+  47,
+  48,
+  49,
+  50,
+  51,
+  52
+];
 class MacroBlock extends Component {
+
+
   render() {
     return (
       <div className="macro-block-container">
@@ -115,61 +191,8 @@ class MacroBlock extends Component {
           <div className="macro__item macro__output">Goal</div>
           <div className="macro__item macro__output">Goal</div>
         </div>
-        <div className="macro">
-          <div className="macro__item macro__label">Micro</div>
-          <div className="macro__item micro__output">1</div>
-          <div className="macro__item macro__output">1</div>
-          <div className="macro__item macro__output">1</div>
-          <div className="macro__item macro__output">1</div>
-          <div className="macro__item macro__output">1</div>
-          <div className="macro__item macro__output">1</div>
-          <div className="macro__item macro__output">1</div>
-          <div className="macro__item macro__output">1</div>
-          <div className="macro__item macro__output">1</div>
-          <div className="macro__item macro__output">1</div>
-          <div className="macro__item macro__output">1</div>
-          <div className="macro__item macro__output">1</div>
-          <div className="macro__item macro__output">1</div>
-          <div className="macro__item macro__output">1</div>
-          <div className="macro__item macro__output">1</div>
-          <div className="macro__item macro__output">1</div>
-          <div className="macro__item macro__output">1</div>
-          <div className="macro__item macro__output">1</div>
-          <div className="macro__item macro__output">1</div>
-          <div className="macro__item macro__output">1</div>
-          <div className="macro__item macro__output">1</div>
-          <div className="macro__item macro__output">1</div>
-          <div className="macro__item macro__output">1</div>
-          <div className="macro__item macro__output">1</div>
-          <div className="macro__item macro__output">1</div>
-          <div className="macro__item macro__output">1</div>
-          <div className="macro__item macro__output">1</div>
-          <div className="macro__item macro__output">1</div>
-          <div className="macro__item macro__output">1</div>
-          <div className="macro__item macro__output">1</div>
-          <div className="macro__item macro__output">1</div>
-          <div className="macro__item macro__output">1</div>
-          <div className="macro__item macro__output">1</div>
-          <div className="macro__item macro__output">1</div>
-          <div className="macro__item macro__output">1</div>
-          <div className="macro__item macro__output">1</div>
-          <div className="macro__item macro__output">1</div>
-          <div className="macro__item macro__output">1</div>
-          <div className="macro__item macro__output">1</div>
-          <div className="macro__item macro__output">1</div>
-          <div className="macro__item macro__output">1</div>
-          <div className="macro__item macro__output">1</div>
-          <div className="macro__item macro__output">1</div>
-          <div className="macro__item macro__output">1</div>
-          <div className="macro__item macro__output">1</div>
-          <div className="macro__item macro__output">1</div>
-          <div className="macro__item macro__output">1</div>
-          <div className="macro__item macro__output">1</div>
-          <div className="macro__item macro__output">1</div>
-          <div className="macro__item macro__output">1</div>
-          <div className="macro__item macro__output">1</div>
-          <div className="macro__item macro__output">1</div>
-        </div>
+        <NumberList numbers={numbers} />  
+        
       </div>
     )
   }
