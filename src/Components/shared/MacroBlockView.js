@@ -3,25 +3,10 @@ import './macroBlockView.css';
 
 
 function ListItem(props) {
-  // Correct! There is no need to specify the key here:
-  return <div className="micro__output">{props.value}</div>;
+  return <div className="micro__value">{props.value}</div>; // Correct! There is no need to specify the key here:
 }
 
-function NumberList(props) {
-  const numbers = props.numbers;
-  const listItems = numbers.map(number => (
-    // Correct! Key should be specified inside the array.
-    <ListItem key={number.toString()} value={number} />
-  ));
-  return (
-    <div className="micro">
-      <div className="micro__label">Micro</div>
-      {listItems}
-    </div>
-  )
-}
-
-const numbers = [
+const micros = [
   1,
   2,
   3,
@@ -75,123 +60,146 @@ const numbers = [
   51,
   52
 ];
-class MacroBlock extends Component {
 
+function MicroList(props) {
+  const micros = props.micros;
+  const listItems = micros.map(micro => ( 
+    <ListItem key={micro.toString()} value={micro} /> // Correct! Key should be specified inside the array.
+  ));
+  return (
+    <div className="micro">
+      <div className="micro__name">Micro</div>
+      {listItems}
+    </div>
+  )
+}
+
+class MacroBlock extends Component {
 
   render() {
     return (
       <div className="macro-block-container">
+
         <div className="program">
-          <div className="program__item program__label">Program Name</div>
-          <div className="program__item program__output">The Revolution</div>
+          <div className="program__name">Program Name</div>
+          <div className="program__value">The Revolution</div>
         </div>
+
         <div className="macro">
-          <div className="macro__item macro__label">Macro</div>
-          <div className="macro__item macro__output">ATC</div>
+          <div className="macro__name">Macro</div>
+          <div className="macro__value">ATC</div>
         </div>
+
         <div className="month">
-          <div className="month__item month__label">Month</div>
-          <div className="month__item month__output">Jun</div>
-          <div className="month__item month__output">Jul</div>
-          <div className="month__item month__output">Aug</div>
-          <div className="month__item month__output">Sep</div>
-          <div className="month__item month__output">Oct</div>
-          <div className="month__item month__output">Nov</div>
-          <div className="month__item month__output">Dec</div>
-          <div className="month__item month__output">Jan</div>
-          <div className="month__item month__output">Feb</div>
-          <div className="month__item month__output">Mar</div>
-          <div className="month__item month__output">Apr</div>
-          <div className="month__item month__output">May</div>
-          <div className="month__item month__output">Jun</div>
+          <div className="month__name">Month</div>
+          <div className="month__value">Jun</div>
+          <div className="month__value">Jul</div>
+          <div className="month__value">Aug</div>
+          <div className="month__value">Sep</div>
+          <div className="month__value">Oct</div>
+          <div className="month__value">Nov</div>
+          <div className="month__value">Dec</div>
+          <div className="month__value">Jan</div>
+          <div className="month__value">Feb</div>
+          <div className="month__value">Mar</div>
+          <div className="month__value">Apr</div>
+          <div className="month__value">May</div>
+          <div className="month__value">Jun</div>
         </div>
+
         <div className="macro">
-          <div className="macro__item macro__label">Stage</div>
-          <div className="macro__item macro__output">Prepatory</div>
-          <div className="macro__item macro__output">Precompetition</div>
-          <div className="macro__item macro__output">Competition</div>
-          <div className="macro__item macro__output">Transition</div>
-          <div className="macro__item macro__output">Prepatory</div>
-          <div className="macro__item macro__output">Precompetition</div>
-          <div className="macro__item macro__output">Competition</div>
-          <div className="macro__item macro__output">Transition</div>
+          <div className="macro__name">Stage</div>
+          <div className="macro__value">Prepatory</div>
+          <div className="macro__value">Precompetition</div>
+          <div className="macro__value">Competition</div>
+          <div className="macro__value">Transition</div>
+          <div className="macro__value">Prepatory</div>
+          <div className="macro__value">Precompetition</div>
+          <div className="macro__value">Competition</div>
+          <div className="macro__value">Transition</div>
         </div>
+
         <div className="macro">
-          <div className="macro__item macro__label">Events</div>
-          <div className="macro__item macro__output">Event</div>
-          <div className="macro__item macro__output">Event</div>
-          <div className="macro__item macro__output">Event</div>
-          <div className="macro__item macro__output">Event</div>
-          <div className="macro__item macro__output">Event</div>
-          <div className="macro__item macro__output">Event</div>
-          <div className="macro__item macro__output">Event</div>
-          <div className="macro__item macro__output">Event</div>
-          <div className="macro__item macro__output">Event</div>
-          <div className="macro__item macro__output">Event</div>
-          <div className="macro__item macro__output">Event</div>
-          <div className="macro__item macro__output">Event</div>
+          <div className="macro__name">Events</div>
+          <div className="macro__value">Event</div>
+          <div className="macro__value">Event</div>
+          <div className="macro__value">Event</div>
+          <div className="macro__value">Event</div>
+          <div className="macro__value">Event</div>
+          <div className="macro__value">Event</div>
+          <div className="macro__value">Event</div>
+          <div className="macro__value">Event</div>
+          <div className="macro__value">Event</div>
+          <div className="macro__value">Event</div>
+          <div className="macro__value">Event</div>
+          <div className="macro__value">Event</div>
         </div>
+
         <div className="macro">
-          <div className="macro__item macro__label">Body Goals</div>
-          <div className="macro__item macro__output">Goal</div>
-          <div className="macro__item macro__output">Goal</div>
-          <div className="macro__item macro__output">Goal</div>
-          <div className="macro__item macro__output">Goal</div>
-          <div className="macro__item macro__output">Goal</div>
-          <div className="macro__item macro__output">Goal</div>
-          <div className="macro__item macro__output">Goal</div>
-          <div className="macro__item macro__output">Goal</div>
-          <div className="macro__item macro__output">Goal</div>
-          <div className="macro__item macro__output">Goal</div>
-          <div className="macro__item macro__output">Goal</div>
-          <div className="macro__item macro__output">Goal</div>
+          <div className="macro__name">Body Goals</div>
+          <div className="macro__value">Goal</div>
+          <div className="macro__value">Goal</div>
+          <div className="macro__value">Goal</div>
+          <div className="macro__value">Goal</div>
+          <div className="macro__value">Goal</div>
+          <div className="macro__value">Goal</div>
+          <div className="macro__value">Goal</div>
+          <div className="macro__value">Goal</div>
+          <div className="macro__value">Goal</div>
+          <div className="macro__value">Goal</div>
+          <div className="macro__value">Goal</div>
+          <div className="macro__value">Goal</div>
         </div>
+
         <div className="macro">
-          <div className="macro__item macro__label">Performance Goals</div>
-          <div className="macro__item macro__output">Goal</div>
-          <div className="macro__item macro__output">Goal</div>
-          <div className="macro__item macro__output">Goal</div>
-          <div className="macro__item macro__output">Goal</div>
-          <div className="macro__item macro__output">Goal</div>
-          <div className="macro__item macro__output">Goal</div>
-          <div className="macro__item macro__output">Goal</div>
-          <div className="macro__item macro__output">Goal</div>
-          <div className="macro__item macro__output">Goal</div>
-          <div className="macro__item macro__output">Goal</div>
-          <div className="macro__item macro__output">Goal</div>
-          <div className="macro__item macro__output">Goal</div>
+          <div className="macro__name">Performance Goals</div>
+          <div className="macro__value">Goal</div>
+          <div className="macro__value">Goal</div>
+          <div className="macro__value">Goal</div>
+          <div className="macro__value">Goal</div>
+          <div className="macro__value">Goal</div>
+          <div className="macro__value">Goal</div>
+          <div className="macro__value">Goal</div>
+          <div className="macro__value">Goal</div>
+          <div className="macro__value">Goal</div>
+          <div className="macro__value">Goal</div>
+          <div className="macro__value">Goal</div>
+          <div className="macro__value">Goal</div>
         </div>
+
         <div className="macro">
-          <div className="macro__item macro__label">Training Phase</div>
-          <div className="macro__item macro__output">Goal</div>
-          <div className="macro__item macro__output">Goal</div>
-          <div className="macro__item macro__output">Goal</div>
-          <div className="macro__item macro__output">Goal</div>
-          <div className="macro__item macro__output">Goal</div>
-          <div className="macro__item macro__output">Goal</div>
-          <div className="macro__item macro__output">Goal</div>
-          <div className="macro__item macro__output">Goal</div>
-          <div className="macro__item macro__output">Goal</div>
-          <div className="macro__item macro__output">Goal</div>
-          <div className="macro__item macro__output">Goal</div>
-          <div className="macro__item macro__output">Goal</div>
+          <div className="macro__name">Training Phase</div>
+          <div className="macro__value">Goal</div>
+          <div className="macro__value">Goal</div>
+          <div className="macro__value">Goal</div>
+          <div className="macro__value">Goal</div>
+          <div className="macro__value">Goal</div>
+          <div className="macro__value">Goal</div>
+          <div className="macro__value">Goal</div>
+          <div className="macro__value">Goal</div>
+          <div className="macro__value">Goal</div>
+          <div className="macro__value">Goal</div>
+          <div className="macro__value">Goal</div>
+          <div className="macro__value">Goal</div>
         </div>
+
         <div className="macro">
-          <div className="macro__item macro__label">Sport Phase</div>
-          <div className="macro__item macro__output">Goal</div>
-          <div className="macro__item macro__output">Goal</div>
-          <div className="macro__item macro__output">Goal</div>
-          <div className="macro__item macro__output">Goal</div>
-          <div className="macro__item macro__output">Goal</div>
-          <div className="macro__item macro__output">Goal</div>
-          <div className="macro__item macro__output">Goal</div>
-          <div className="macro__item macro__output">Goal</div>
-          <div className="macro__item macro__output">Goal</div>
-          <div className="macro__item macro__output">Goal</div>
-          <div className="macro__item macro__output">Goal</div>
-          <div className="macro__item macro__output">Goal</div>
+          <div className="macro__name">Sport Phase</div>
+          <div className="macro__value">Goal</div>
+          <div className="macro__value">Goal</div>
+          <div className="macro__value">Goal</div>
+          <div className="macro__value">Goal</div>
+          <div className="macro__value">Goal</div>
+          <div className="macro__value">Goal</div>
+          <div className="macro__value">Goal</div>
+          <div className="macro__value">Goal</div>
+          <div className="macro__value">Goal</div>
+          <div className="macro__value">Goal</div>
+          <div className="macro__value">Goal</div>
+          <div className="macro__value">Goal</div>
         </div>
-        <NumberList numbers={numbers} />  
+        
+        <MicroList micros={micros} />  
         
       </div>
     )
