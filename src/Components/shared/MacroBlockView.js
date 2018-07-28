@@ -61,8 +61,8 @@ const micros = [
   52
 ];
 
-function MicroList(props) {
-  const micros = props.micros;
+function MicroList({micros}) {
+  // const micros = props.micros;
   const listItems = micros.map(micro => ( 
     <ListItem key={micro.toString()} value={micro} /> // Correct! Key should be specified inside the array.
   ));
