@@ -61,6 +61,10 @@ const micros = [
   52
 ];
 
+// let range = n => Array.from(Array(n).keys())
+// const weeks = range(52);
+// console.log(weeks);
+
 function MicroList({micros}) {
   // const micros = props.micros;
   const listItems = micros.map(micro => ( 
@@ -72,6 +76,17 @@ function MicroList({micros}) {
       {listItems}
     </div>
   )
+}
+
+const renderMonths = () => {
+  const months = [
+    'Jun',     'Jul',      'Aug',      'Sep',
+    'Oct',     'Nov',      'Dec',      'Jan',
+    'Feb',     'Mar',      'Apr',      'May'
+  ];
+  return months.map((eachMonth) => {
+    return <div className="month__value">{eachMonth}</div>
+  });
 }
 
 class MacroBlock extends Component {
@@ -92,19 +107,7 @@ class MacroBlock extends Component {
 
         <div className="month">
           <div className="month__name">Month</div>
-          <div className="month__value">Jun</div>
-          <div className="month__value">Jul</div>
-          <div className="month__value">Aug</div>
-          <div className="month__value">Sep</div>
-          <div className="month__value">Oct</div>
-          <div className="month__value">Nov</div>
-          <div className="month__value">Dec</div>
-          <div className="month__value">Jan</div>
-          <div className="month__value">Feb</div>
-          <div className="month__value">Mar</div>
-          <div className="month__value">Apr</div>
-          <div className="month__value">May</div>
-          <div className="month__value">Jun</div>
+          {renderMonths()}
         </div>
 
         <div className="macro">
