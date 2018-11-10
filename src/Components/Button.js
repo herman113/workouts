@@ -13,9 +13,15 @@ export default class Button extends Component {
   }
 
   render() {
+    const dynamicStyle = {
+      color: this.props.color
+    }
     return (
       <button 
-        style={buttonStyle}
+        style={{
+          ...buttonStyle,
+          ...dynamicStyle
+        }}
         className={this.getClassName()}
         onClick={this.props.onClick}
       >{this.props.text}</button>

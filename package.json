@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@storybook/cli": "^4.0.2",
     "moment": "^2.22.2",
     "react": "^16.2.0",
     "react-big-calendar": "^0.19.2",
@@ -13,6 +14,17 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "storybook": "start-storybook -p 9009 -s public",
+    "build-storybook": "build-storybook -s public"
+  },
+  "devDependencies": {
+    "@storybook/addon-actions": "^4.0.2",
+    "@storybook/addon-links": "^4.0.2",
+    "@storybook/addons": "^4.0.2",
+    "@storybook/react": "^4.0.2",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.4",
+    "babel-runtime": "^6.26.0"
   }
 }
